@@ -37,6 +37,10 @@ def main():
 
         # Write Your Code Here Start
 
+    
+        # Case 3
+        process_cli_input(file_path, history, t)
+    
         # Handle Cron Job (Use Case 4)
         if t % 10 == 0:
             # swap values
@@ -46,6 +50,7 @@ def main():
 
             history.append(f"{t} swap {state_values[1]} {state_values[0]}")
 
+  
         # Write Your Code Here End
 
         time.sleep(1)  # Wait for 1 second before polling again
