@@ -9,6 +9,7 @@ def print_cli_history(history):
     for entry in history:
         print(entry)
 
+#Added comments
 def process_cli_input(file_path, history, t):
     # Process CLI input here
     try:
