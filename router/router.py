@@ -37,7 +37,13 @@ def main():
 
         # Write Your Code Here Start
 
-    
+        #Case2
+         # Write Your Code Here End
+        # replace x index with y value
+        control_values[signal_values[0] - 1] = signal_values[1]
+        write_hardware_state(file_path, state_values, control_values, signal_values)
+        history.append(f"{t} set control value {x} to {signal_values[y - 1]}")
+
         # Case 3
         process_cli_input(file_path, history, t)
     
