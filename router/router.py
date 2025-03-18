@@ -37,6 +37,15 @@ def main():
 
         # Write Your Code Here Start
 
+        # Handle Cron Job (Use Case 4)
+        if t % 10 == 0:
+            # swap values
+            state_values[0], state_values[1] = state_values[1], state_values[0]
+
+            write_hardware_state(file_path, state_values, control_values, signal_values)
+
+            history.append(f"{t} swap {state_values[1]} {state_values[0]}")
+
         # Write Your Code Here End
 
         time.sleep(1)  # Wait for 1 second before polling again
