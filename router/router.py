@@ -42,11 +42,17 @@ def main():
             # swap values
             state_values[0], state_values[1] = state_values[1], state_values[0]
 
-            write_hardware_state(file_path, state_values, control_values, signal_values)
-
             history.append(f"{t} swap {state_values[1]} {state_values[0]}")
 
-        # Write Your Code Here End
+        # replace x index with y value
+        control_values[signal_values[0] - 1] = signal_values[1]
+    
+
+        write_hardware_state(file_path, state_values, control_values, signal_values)
+        history.append(f"{t} set control value {x} to {signal_values[y - 1]}")
+
+
+
 
         time.sleep(1)  # Wait for 1 second before polling again
     print(history)
